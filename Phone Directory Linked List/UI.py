@@ -3,7 +3,6 @@ from tkinter import ttk
 import pickle
 from functools import partial
 from linked_list import LinkedList
-from data import init_contact_list
 
 BACKGROUND_COLOR = "#F5F5F5"
 CONTACT_BUTTON_COLOR ="#E8E8E8"
@@ -82,7 +81,6 @@ class PhoneDirectoryInterface():
 
         with open("contact_data.txt", mode="rb") as file:
             contact_list = pickle.load(file)
-            # contact_list = init_contact_list
 
         if flag:
             for contact in contact_list:
